@@ -1,6 +1,6 @@
 {
-    function removeDuplicates(arr : any[]) : any[] {
-        return arr.filter((item : any, index : any) => arr.indexOf(item) === index);
+    function removeDuplicates(data : any[]) : any[] {
+        return data.filter((item : any, index : any) => data.indexOf(item) === index);
     }
 
     const result1 = removeDuplicates([1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5, 6, 6]);

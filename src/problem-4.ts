@@ -11,14 +11,15 @@
     };
 
     type Shape = Circle | Rectangle;
+    type Alphanumeric = number |  string;
 
-    function calculateShapeArea(data : Shape) : number | string {
+    function calculateShapeArea(data : Shape) : Alphanumeric {
         if (data.shape === "circle") {
             return (Math.PI * (data.radius ** 2)).toFixed(2);
-        } else if (data.shape === "rectangle") {
+        } if (data.shape === "rectangle") {
             return data.height * data.width;
         } else {
-            return "Unknown shape...";
+            return "Unknown area...";
         }
     };
 
@@ -30,7 +31,6 @@
     console.log(circleArea);
 
 
-    // Sample Input 2:
     const rectangleArea = calculateShapeArea({
         shape: "rectangle",
         width: 4,

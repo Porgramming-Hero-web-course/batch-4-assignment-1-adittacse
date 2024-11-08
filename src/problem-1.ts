@@ -1,7 +1,7 @@
 {
-    function sumArray(arr: number[]) : number {
+    function sumArray(data: number[]) : number {
         let add : number = 0;
-        arr.forEach(element => {
+        data.forEach(element => {
             add = add + element;
         });
         return add;

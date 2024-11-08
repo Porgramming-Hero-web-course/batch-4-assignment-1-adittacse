@@ -1,5 +1,5 @@
 {
-    const getProperty = <T, Q extends keyof T>(key: T, value: Q) => {
+    const getProperty = <T, Q extends keyof T>(key: T, value: Q) : T[Q] => {
         return key[value];
     };
 
