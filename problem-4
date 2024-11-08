@@ -1,0 +1,41 @@
+{
+    type Circle = {
+        shape: "circle";
+        radius: number;
+    };
+
+    type Rectangle = {
+        shape: "rectangle";
+        height: number;
+        width: number;
+    };
+
+    type Shape = Circle | Rectangle;
+
+    function calculateShapeArea(data : Shape) : number | string {
+        if (data.shape === "circle") {
+            return (Math.PI * (data.radius ** 2)).toFixed(2);
+        } else if (data.shape === "rectangle") {
+            return data.height * data.width;
+        } else {
+            return "Unknown shape...";
+        }
+    };
+
+    const circleArea = calculateShapeArea({
+        shape: "circle",
+        radius: 5,
+    });
+
+    console.log(circleArea);
+
+
+    // Sample Input 2:
+    const rectangleArea = calculateShapeArea({
+        shape: "rectangle",
+        width: 4,
+        height: 6,
+    });
+
+    console.log(rectangleArea);
+}
